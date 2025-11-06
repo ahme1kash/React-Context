@@ -2,6 +2,7 @@ import NameContext from '../../context/NameContext'
 import './index.css'
 import {useContext,useState} from 'react'
 import {useHistory} from 'react-router-dom'
+import registerImg from '../assets/images/register.webp'
 const Register = (props)=>{
     const {allEvents} = props;
     const history = useHistory();
@@ -26,6 +27,8 @@ const Register = (props)=>{
     return(
         <div>
             <form className='register-container' onSubmit={handleSubmit}>
+            <img src={registerImg} alt="register form"/>
+
             <label htmlFor="username" className='user-label'>
               Your name
             </label>
